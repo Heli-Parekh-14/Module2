@@ -131,6 +131,23 @@ namespace ConsoleApp1
                     break;
                 Console.WriteLine(i);
             }
+            
+            //goto control stmt
+            Console.WriteLine("Enter your age:");
+            int age = Convert.ToInt32(Console.ReadLine());
+            if (age < 18)            
+                goto ineligible;
+            
+            else
+            {
+                Console.WriteLine("You are eligible to vote!");
+                goto exit;
+            }
+                
+
+            ineligible:
+                Console.WriteLine("You are not eligible to vote!");
+            exit:
 
             //infinite loop
             /*for (i = 0; ; i++)
